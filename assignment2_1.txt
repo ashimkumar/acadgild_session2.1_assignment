@@ -1,0 +1,17 @@
+(1) Login to the VM
+(2) Open the terminal
+(3) cd /usr
+(4) ls (check acadgild directory exists or not)	
+		- If does not exists then execute
+			sudo mkdir acadgild and then enter password in the prompt
+
+(5) cd acadgild
+(6) sudo mkdir hadoop and then enter password in the prompt
+(7) hdfs dfs -touchz /usr/acadgild/hadoop/word-count.txt
+(8) hdfs dfs -ls (for checking the file name which is created)
+(9) hdfs dfs -appendToFile - /usr/acadgild/hadoop/word-count.txt
+	
+		- Enter the desired text
+		- when done entering all the text, press "ctrl + C" so as to instruct the daemon/processor to write all the contents to the file
+	
+(10) hdfs dfs -cat /usr/acadgild/hadoop/word-count.txt (this will display the contents of the file in the console)
